@@ -1,0 +1,9 @@
+__pycache__/
+<<<<<<< HEAD
+.data.bin
+TODO.md
+v1.0.0.zip
+=======
+game_data
+*.zip.zip
+>>>>>>> 52b75f4 (	modified:   .gitignore)
