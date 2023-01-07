@@ -1,6 +1,7 @@
 # My files
-game_data
+gameData
 releases/
+TODO.md
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

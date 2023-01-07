@@ -3,6 +3,7 @@ from pygame.sprite import Sprite
 from pygame import Surface
 
 from settings import Settings
+from resources import get_resource
 
 class Ship(Sprite):
     """A class to configure the ship"""
@@ -15,7 +16,8 @@ class Ship(Sprite):
 
         self.screen = screen
         self.screen_rect = self.screen.get_rect()
-        self.image = pygame.image.load("images/ship.bmp").convert()
+        self.image_path = get_resource("images/ship.bmp")
+        self.image = pygame.image.load(self.image_path)
         self.image.set_colorkey((230,230,230))
         self.rect = self.image.get_rect()
 

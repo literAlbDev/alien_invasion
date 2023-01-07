@@ -1,4 +1,5 @@
 from settings import Settings
+from resources import app_dir
 
 class GameStats():
     """Track statistics for Alien Invasion."""
@@ -24,7 +25,7 @@ class GameStats():
 
     def save_stats(self):
         """Save game statistics in data file"""
-        with open(".data.bin", "w") as file:
+        with open(app_dir() + "gameData", "w") as file:
             file.writelines(
                 str(self.highscore) + "\n" +
                 str(self.score) + "\n" +
@@ -35,7 +36,7 @@ class GameStats():
     def get_stats(self):
         """Get the game statistics from data file"""
         try:
-            with open(".data.bin", "r") as file:
+            with open(app_dir() + "gameData", "r") as file:
                 self.highscore = int(file.readline())
                 self.score     = int(file.readline())
                 self.level     = int(file.readline())

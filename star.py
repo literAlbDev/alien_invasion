@@ -2,6 +2,8 @@ import pygame
 from pygame.sprite import Sprite
 from pygame import Surface
 
+from resources import get_resource
+
 class Star(Sprite):
     """Class to define stars in the game"""
 
@@ -12,7 +14,8 @@ class Star(Sprite):
 
         self.screen = screen
         self.screen_rect = screen.get_rect()
-        self.image = pygame.image.load("images/star.png")
+        self.image_path = get_resource("images/star.png")
+        self.image = pygame.image.load(self.image_path)
         self.image.set_alpha(100)
         self.rect = self.image.get_rect()
 

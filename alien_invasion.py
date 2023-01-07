@@ -26,7 +26,7 @@ aliens = Group()
     #Create random star pattern
 stars = Group()
 for i in range(randint(10,100)):
-    star = Star(settings, screen)
+    star = Star(screen)
     star.rect.x = randint(0,settings.screen_width)
     star.rect.y = randint(0,settings.screen_height)
     stars.add(star)

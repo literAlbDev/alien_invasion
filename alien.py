@@ -3,6 +3,7 @@ from pygame.sprite import Sprite
 from pygame import Surface
 
 from settings import Settings
+from resources import get_resource
 
 class Alien(Sprite):
     """A class to represent a single alien in the fleet."""
@@ -15,7 +16,8 @@ class Alien(Sprite):
         self.settings = settings
         self.screen = screen
 
-        self.image = pygame.image.load("images/alien.bmp").convert()
+        self.image_path = get_resource("images/alien.bmp")
+        self.image = pygame.image.load(self.image_path).convert()
         self.image.set_colorkey((230,230,230))
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
