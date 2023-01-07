@@ -41,4 +41,4 @@ class GameStats():
                 self.score     = int(file.readline())
                 self.level     = int(file.readline())
         except:
-            print("no file game_stats.bin")
+            pass
